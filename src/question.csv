@@ -1,0 +1,157 @@
+question_key,answer_value,year_range
+Q1,Gen Alpha ,2012 - 2022
+Q1,Gen Z,1997 - 2011
+Q1,Gen Y aka Millenial,1981 - 1996
+Q1,Gen X,1965 - 1980
+Q1,Boomer,1946 - 1964
+Q1,Silent Generation,1928 - 1945
+Q1,The Greatest Generation ,1922 - 1927
+Q2,"Louis Armstrong, Bessie Smith and Duke Ellington",1920 - 1929
+Q2,"Fred Astaire, Benny Goodman and Tommy Dorsey",1930 - 1939
+Q2,"Billie Holiday, Dizzy Gillespie and Bing Crosby",1940 - 1949
+Q2,"Elvis Presley, Frank Sinatra and Miles Davis",1950 - 1959
+Q2,"The Beatles, Rolling Stones and Aretha Franklin",1960 - 1969
+Q2,"David Bowie,  Bob Marley and Led Zeppelin",1970 - 1979
+Q2,"Michael Jackson, Madonna and Metallica ",1980 - 1989
+Q2,"Nirvana, Spice Girls and Oasis",1990 - 1999
+Q2,"Eminem, Lily Allen and Radiohead",2000 - 2009
+Q2,"Taylor Swift, Drake and Arctic Monkeys",2010 - 2019
+Q2,"Harry Styles, Ed Sheeran and Arianna Grande",2020 - 2022
+Q3,“Winnie the Pooh” by A. A. Milne,1920 - 1929
+Q3,“The Hobbit” by J. R. R. Tolkien ,1930 - 1939
+Q3,“1984” by George Orwell ,1940 - 1949
+Q3,“Lord of the Flies” by William Golding,1950 - 1959
+Q3,“Catch 22” by Joseph Heller,1960 - 1969
+Q3,“The Shining” by Stephen King,1970 - 1979
+Q3,“Matilda” by Roald Dhal ,1980 - 1989
+Q3,“Harry Potter and the Philosopher’s Stone” J. K. Rowling,1990 - 1999
+Q3,“The Hunger Games” by Suzanne Collins,2000 - 2009
+Q3,“Gone Girl” by Gillian Flynn ,2010 - 2019
+Q3,“The Midnight Library” by Matt Haig ,2020 - 2022
+Q4,William Morris Hughes ,1915 - 1923
+Q4,Stanley Melbourne Bruce ,1923 - 1929
+Q4,James Henry Scullin ,1929 - 1932
+Q4,Joseph Aloysius Lyons,1932 - 1939
+Q4,Earle Page,1939
+Q4,Robert Gordon Menzies,1939 - 1941
+Q4,Arthur William Fadden ,1941
+Q4,John Curtin,1941 - 1945
+Q4,Francis Michael Forde,1945
+Q4,Joseph Benedict Chifley,1945 - 1949
+Q4,Robert Gordon Menzies,1949 - 1966
+Q4,Harold Holt,1966 - 1967
+Q4,John McEwen,1967 - 1968
+Q4,John Grey Gorton ,1968 - 1971
+Q4,William McMahon,1971 - 1972
+Q4,Gough Whitlam,1972 - 1975
+Q4,Malcom Fraser,1975 - 1983
+Q4,Robert Hawke,1983 - 1991
+Q4,Paul Keating,1991 - 1996
+Q4,John Howard ,1996 - 2007
+Q4,Kevin Rudd,2007 - 2010
+Q4,Julia Gillard,2012 - 2013
+Q4,Tony Abbot,2013 - 2015
+Q4,Malcom Turnbull,2015 - 2018
+Q4,Scott Morrison,2018 - 2022
+Q4,Anthony Albanese,2022
+Q5,Robin Hood,1922
+Q5,The Covered Wagon,1923
+Q5,The Thief of Baghdad,1924
+Q5,The Big Parade,1925
+Q5,Aloma of the South Seas,1926
+Q5,The Jazz Singer,1927
+Q5,The Road to Ruin,1928
+Q5,The Broadway Melody,1929
+Q5,Tom Swayer,1930
+Q5,Frankenstein,1931
+Q5,Shanghai Express,1932
+Q5,King Kong,1933
+Q5,It Happened One Night,1934
+Q5,Top Hat,1935
+Q5,One in a Million,1936
+Q5,Snow White and the Seven Dwarfs,1937
+Q5,Alexander’s Ragtime Band,1938
+Q5,Gone with the Wind,1939
+Q5,Pinocchio,1940
+Q5,Sergeant York,1941
+Q5,Bambi,1942
+Q5,This is the Army,1943
+Q5,Going My Way,1944
+Q5,The Bells of St Mary’s,1945
+Q5,Song of the South,1946
+Q5,Forever Amber,1947
+Q5,The Snake Pit,1948
+Q5,Samson and Delilah,1949
+Q5,Cinderella,1950
+Q5,Quo Vadis,1951
+Q5,The Greatest Show on earth,1952
+Q5,Peter Pan,1953
+Q5,White Christmas,1954
+Q5,Lady and the Tramp,1955
+Q5,The Ten Comandments,1956
+Q5,The Bridge over the River Kwai,1957
+Q5,South Pacific,1958
+Q5,Ben-Hur,1959
+Q5,Swiss Family Robinson,1960
+Q5,101 Dalmations,1961
+Q5,The Longest Day,1962
+Q5,Cleopatra,1963
+Q5,Mary Poppins,1964
+Q5,The Sound of Music,1965
+Q5,The Bible: In the Beginning…,1966
+Q5,The Jungle Book,1967
+Q5,Funny Girl,1968
+Q5,Butch Cassidy and the Sundance Kid,1969
+Q5,Love Story,1970
+Q5,Billy Jack,1971
+Q5,The Godfather,1972
+Q5,The Exorcist,1973
+Q5,Blazing Saddles,1974
+Q5,Jaws,1975
+Q5,Rocky,1976
+Q5,Star Wars: Episode IV - A New Hope,1977
+Q5,Grease,1978
+Q5,Moonraker,1979
+Q5,Star Wars: Episode V - The Empire Strikes Back,1980
+Q5,Raiders of the Last Arc,1981
+Q5,E.T. - The Extra Terrestrial,1982
+Q5,Star Wars: Episode VI - Return of the Jedi,1983
+Q5,Indiana Jones and the Temple of Doom,1984
+Q5,Back to the Future,1985
+Q5,Top Gun,1986
+Q5,Fatal Attraction,1987
+Q5,Rain Man,1988
+Q5,Indiana Jones and the Last Crusade,1989
+Q5,Ghost,1990
+Q5,Judgement Day,1991
+Q5,Aladdin,1992
+Q5,Jurassic Park,1993
+Q5,The Lion King,1994
+Q5,Die Hard: With a Vengence,1995
+Q5,Independence Day,1996
+Q5,Titanic,1997
+Q5,Armageddon,1998
+Q5,Star Wars: Episode I - The Phantom Manace,1999
+Q5,Mission Impossible II,2000
+Q5,Happy Potter and the Sorcerer’s Stone,2001
+Q5,The Lord of the Rings: The Two Towers,2002
+Q5,The Lord of the Rings: The Return of the King,2003
+Q5,Shrek 2,2004
+Q5,Harry Potter and the Goblet of Fire,2005
+Q5,Pirates of the Caribbean: Dead Man’s Chest,2006
+Q5,Pirates of the Caribbean: At World’s End,2007
+Q5,The Dark Knight,2008
+Q5,Avatar,2009
+Q5,Toy Story 3,2010
+Q5,Harry Potters and the Deathly Hallows: Part 2,2011
+Q5,The Avengers,2012
+Q5,Frozen,2013
+Q5,Transformers: Age of Extinction,2014
+Q5,Star Wars: Episode VII - The Force Awakens,2015
+Q5,Captain America: Civil War,2016
+Q5,Star Wars: Episode VIII - The Last Jedi,2017
+Q5,Avengers: Infinity War,2018
+Q5,Avengers: Endgame,2019
+Q5,The Eight Hundred,2020
+Q5,Spider-Man: No Way Home,2021
+Q5,Top Gun: Maverick ,2022

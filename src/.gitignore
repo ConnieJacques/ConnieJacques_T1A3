@@ -1,2 +1,7 @@
 venv/
 .DS_Store
+src/.pytest_cache
+src/__pycache__
+*.pyc
+*~
+*.swp

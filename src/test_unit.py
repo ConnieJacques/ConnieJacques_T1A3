@@ -15,6 +15,16 @@ assert 2022 in dictionary.keys()
 assert "The classic German vampire movie" in dictionary[1922]
 
 
-# chec Questions class can access dictionary
-import questions.py
-print(question_four.question)
+# check Questions class can access dictionaryclass Questions:
+questions_dictionary = {
+    'Question One:': 'Which generation do you belong to?'}
+
+class Questions:
+    def __init__(self, number, question):
+        self.number = number 
+        self.question = question
+
+question_one = Questions(((list(questions_dictionary.keys())[0])), (list(questions_dictionary.values())[0]))
+
+assert question_one.number == "Question One:"
+assert "Which" in question_one.question

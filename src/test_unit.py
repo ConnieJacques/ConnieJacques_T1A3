@@ -15,7 +15,8 @@ assert 2022 in dictionary.keys()
 assert "The classic German vampire movie" in dictionary[1922]
 
 
-# check Questions class can access dictionaryclass Questions:
+
+# test I'm accessing the Questions class correctly to output expected keys/values from a dictionary of questions
 questions_dictionary = {
     'Question One:': 'Which generation do you belong to?'}
 

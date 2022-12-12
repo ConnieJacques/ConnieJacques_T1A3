@@ -6,11 +6,13 @@ import csv
 # Dictionary stores the quizz game's questions
 questions_dictionary = {
     'Question One:': 'Which generation do you belong to?',
-    'Questions Two:': 'Which musicians and bands were popular in the year you were born?',
-    'Questions Three:': 'Who was the Prime Minister of Australia in the year you were born?',
-    'Questions Four:': 'Which popular novel was released in the decade you were born?',
+    'Question Two:': 'Which musicians and bands were popular in the year you were born?',
+    'Question Four:': 'Which popular novel was released in the decade you were born?',
+    'Question Three:': 'Who was the Prime Minister of Australia in the year you were born?',
     'Question Five:': 'What was the highest grossing film in the year you were born?'
 }
+
+
 
 # Questions class is framework for questions
 class Questions:
@@ -35,8 +37,7 @@ with open('question.csv') as f:
 # List contains answer codes
 question_values = ['a)', 'b)', 'c)', 'd)', 'e)', 'f)', 'g)', 'h)', 'i)', 'j)', 'k)', 'l)', 'm)', 'n)', 'o)', 'p)', 'q)', 'r)', 's)', 't)']
 
-# Directions for the user
-print("Please answer questions by entering the corresponding letter and pressing ENTER.")
+
 
 def question_series(question_code, question, answer_options):
     # Ask the first question
@@ -49,28 +50,28 @@ def question_series(question_code, question, answer_options):
 # assess user answer
 def answer_actions():
     user_input = input()
-    try:
-        if len(user_input) == 1 and user_input.lower().isalpha():
-            return user_input
-        else:
-            print("Please answer questions by entering the corresponding letter and pressing ENTER.")
-    except user_input == quit:
-        raise KeyboardInterrupt
+    # try:
+    if len(user_input) == 1 and user_input.lower().isalpha():
+        return user_input
+        # else:
+        #     print("Please answer questions by entering the corresponding letter and pressing ENTER.")
+    # except user_input == "quit":
+    #     raise KeyboardInterrupt
      
 
 # First question and first set of possible answers
 def question_one_answers():
+    # Directions for the user
+    print("Please answer questions by entering the corresponding letter and pressing ENTER.")
     (question_series(question_one.number, question_one.question, possible_answers[:7]))
-    answer_actions()
-    return answer_actions()
+    # user_answer = answer_actions()
+    # return answer_actions
 
 # Second question and possible answers
 def question_two_answers():
     if answer_actions() in "abcdefghijk":
         (question_series(question_two.number, question_two.question, possible_answers[7:18]))
         return answer_actions
-    elif answer_actions().lower() == "quit":
-        raise KeyboardInterrupt
 
 
 # Third questions and possible answers
@@ -79,10 +80,6 @@ def question_three_answers():
     # Third question and possible answers
         (question_series(question_three.number, question_three.question, possible_answers[18:29]))
         return answer_actions()
-    # question_three_answers()
-    elif answer_actions().lower() == "quit":
-        raise KeyboardInterrupt
-
 
 # Question four and possible answers
 def question_four_answers():
@@ -153,7 +150,7 @@ question_one_answers()
 
 question_two_answers()
 
-question_three_answers()
+# question_three_answers()
 
 question_four_answers()
 

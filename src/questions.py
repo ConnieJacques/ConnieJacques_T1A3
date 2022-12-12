@@ -1,4 +1,3 @@
-from itertools import chain
 import csv
 
 # import pyinputplus
@@ -8,8 +7,8 @@ import csv
 questions_dictionary = {
     'Question One:': 'Which generation do you belong to?',
     'Questions Two:': 'Which musicians and bands were popular in the year you were born?',
-    'Questions Three:': 'Which popular novel was released in the decade you were born?',
-    'Questions Four:': 'Who was the Prime Minister of Australia in the year you were born?',
+    'Questions Three:': 'Who was the Prime Minister of Australia in the year you were born?',
+    'Questions Four:': 'Which popular novel was released in the decade you were born?',
     'Question Five:': 'What was the highest grossing film in the year you were born?'
 }
 
@@ -34,7 +33,7 @@ with open('question.csv') as f:
         possible_answers.append(row['answer_value'])
 
 # List contains answer codes
-question_values = ['a)', 'b)', 'c)', 'd)', 'e)', 'f)', 'g)']
+question_values = ['a)', 'b)', 'c)', 'd)', 'e)', 'f)', 'g)', 'h)', 'i)', 'j)', 'k)', 'l)', 'm)', 'n)', 'o)', 'p)', 'q)', 'r)', 's)', 't)']
 
 # Directions for the user
 print("Please answer questions by entering the corresponding letter and pressing ENTER.")
@@ -47,68 +46,128 @@ def question_series(question_code, question, answer_options):
         print(i, j)
 
 
-# First question and first set of possible answers
-(question_series(question_one.number, question_one.question, possible_answers[:7]))
-
-# # Ask the first question
-# print(question_one.number, question_one.question)
-# # Prints alternating answer codes and possible answers to format the answers
-# for i, j in (zip(question_values, possible_answers[:7])):
-#     print(i, j)
-
-
 # assess user answer
 def answer_actions():
     user_input = input()
-    if len(user_input) == 1 and user_input.lower().isalpha():
-        return user_input
-    else:
-        print("Please answer questions by entering the corresponding letter and pressing ENTER.")
+    try:
+        if len(user_input) == 1 and user_input.lower().isalpha():
+            return user_input
+        else:
+            print("Please answer questions by entering the corresponding letter and pressing ENTER.")
+    except user_input == quit:
+        raise KeyboardInterrupt
+     
 
-# question two
-match answer_actions():
-    case 'a':
-        (question_series(question_two.number, question_two.question, possible_answers[14:18]))
-    case 'b':
-        (question_series(question_two.number, question_two.question, possible_answers[14:18]))
-    case 'c':
-        (question_series(question_two.number, question_two.question, possible_answers[11:15]))
-    case 'd':
-        (question_series(question_two.number, question_two.question, possible_answers[11:15]))
-    case 'e':
-        (question_series(question_two.number, question_two.question, possible_answers[7:12]))
-    case 'f':
-        (question_series(question_two.number, question_two.question, possible_answers[7:12]))
-    case 'g':
-        (question_series(question_two.number, question_two.question, possible_answers[7:12]))
+# First question and first set of possible answers
+def question_one_answers():
+    (question_series(question_one.number, question_one.question, possible_answers[:7]))
+    answer_actions()
+    return answer_actions()
 
-# question three
-match answer_actions():
-    case 'a':
-        (question_series(question_three.number, question_three.question, possible_answers[14:18]))
-    case 'b':
-        (question_series(question_three.number, question_three.question, possible_answers[14:18]))
-    case 'c':
-        (question_series(question_three.number, question_three.question, possible_answers[11:15]))
-    case 'd':
-        (question_series(question_three.number, question_three.question, possible_answers[11:15]))
-    case 'e':
-        (question_series(question_three.number, question_three.question, possible_answers[7:12]))
-    case 'f':
-        (question_series(question_three.number, question_three.question, possible_answers[7:12]))
-    case 'g':
-        (question_series(question_three.number, question_three.question, possible_answers[7:12]))
+# Second question and possible answers
+def question_two_answers():
+    if answer_actions() in "abcdefghijk":
+        (question_series(question_two.number, question_two.question, possible_answers[7:18]))
+        return answer_actions
+    elif answer_actions().lower() == "quit":
+        raise KeyboardInterrupt
 
-# Returns new list of alternating answer codes and possible answers to format the answers
-# for i, j in (zip(question_values, possible_answers[:7])):
-#     print(i, j)
 
-# def q_one():
-#     print(f"{question_one.number} {question_one.question}")
-#     user_input = input()
-#     user_input = user_input.lower()
-#     match user_input:
-#         case 'a':
+# Third questions and possible answers
+def question_three_answers():
+    if answer_actions() in "abcdefghijk":
+    # Third question and possible answers
+        (question_series(question_three.number, question_three.question, possible_answers[18:29]))
+        return answer_actions()
+    # question_three_answers()
+    elif answer_actions().lower() == "quit":
+        raise KeyboardInterrupt
+
+
+# Question four and possible answers
+def question_four_answers():
+    match answer_actions():
+        case 'a':
+            (question_series(question_four.number, question_four.question, possible_answers[29:32]))
+            return 'a'
+        case 'b':
+            (question_series(question_four.number, question_four.question, possible_answers[31:35]))
+            return 'b'
+        case 'c':
+            (question_series(question_four.number, question_four.question, possible_answers[35:40]))
+            return 'c'
+        case 'd':
+            (question_series(question_four.number, question_four.question, possible_answers[39:42]))
+            return 'd'
+        case 'e':
+            (question_series(question_four.number, question_four.question, possible_answers[39:43]))
+            return 'e'
+        case 'f':
+            (question_series(question_four.number, question_four.question, possible_answers[42:46]))
+            return 'f'
+        case 'g':
+            (question_series(question_four.number, question_four.question, possible_answers[44:47]))
+            return 'g'
+        case 'h':
+            (question_series(question_four.number, question_four.question, possible_answers[46:49]))
+            return 'h'
+        case 'i':
+            (question_series(question_four.number, question_four.question, possible_answers[48:51]))
+            return 'i'
+        case 'j':
+            (question_series(question_four.number, question_four.question, possible_answers[50:56]))
+            return 'j'
+        case 'k':
+            (question_series(question_four.number, question_four.question, possible_answers[53:56]))
+            return 'k'
+
+
+# Question five - prints answer options based on the input taken in response to question_three_answers()
+def question_five_answers():
+    match question_three_answers():
+        case 'a':
+            (question_series(question_five.number, question_five.question, possible_answers[56:64]))
+        case 'b':
+            (question_series(question_five.number, question_five.question, possible_answers[64:74]))
+        case 'c':
+            (question_series(question_five.number, question_five.question, possible_answers[74:84]))
+        case 'd':
+            (question_series(question_five.number, question_five.question, possible_answers[84:94]))
+        case 'e':
+            (question_series(question_five.number, question_five.question, possible_answers[94:104]))
+        case'f':
+            (question_series(question_five.number, question_five.question, possible_answers[104:114]))
+        case 'g':
+            (question_series(question_five.number, question_five.question, possible_answers[114:124]))
+        case 'h':
+            (question_series(question_five.number, question_five.question, possible_answers[124:134]))
+        case 'i':
+            (question_series(question_five.number, question_five.question, possible_answers[134:144]))
+        case 'j':
+            (question_series(question_five.number, question_five.question, possible_answers[144:154]))
+        case 'k':
+            (question_series(question_five.number, question_five.question, possible_answers[154:157]))
+
+
+question_one_answers()
+
+question_two_answers()
+
+question_three_answers()
+
+question_four_answers()
+
+question_five_answers()
+answer_actions()
+
+
+
+# with open('question.csv') as f:
+#         reader = csv.DictReader(f)
+#         birth_year = []
+#         for row in reader:
+#             birth_year.append(row['year_range'])
+
 
 
 

@@ -3,6 +3,7 @@ import user_results
 from clear import clear
 import pyinputplus as pyip
 import questions
+import save_results
 
 
 
@@ -52,7 +53,7 @@ def main_menu():
                 continue
             if user_input == '2':
                 # view previous results
-                pass
+                save_results.save_results()
             elif user_input == '3':
                 pass
             elif user_input == '4' or user_input == 'quit':

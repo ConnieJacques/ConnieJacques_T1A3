@@ -1,0 +1,2 @@
+# Use the os.listdir(directory_path) function to list all files from a folder before and after creating a file
+# Use the os.path.isfile(file_path) function to verify if a newly created file exists in a directory.

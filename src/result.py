@@ -18,7 +18,8 @@ def get_month():
         elif int(user_input) in range(1, 12 + 1):
             return user_input
         else:
-            user_input = pyip.inputInt(prompt = "Please enter a number between 1 - 12\n", min = 1, max = 12)        
+            user_input = pyip.inputInt(prompt = "Please enter a number between 1 - 12\n", min = 1, max = 12)
+            return user_input        
     except KeyboardInterrupt:
         print("It was nice while it lasted. See you next time!")
         raise SystemExit
@@ -33,38 +34,37 @@ def get_day():
         elif int(user_input) in range(1, 31 + 1):
             return user_input
         else: 
-            user_input = pyip.inputInt(min = 1, max = 31)
+            user_input = pyip.inputInt(prompt = "Please enter a number between 1 - 31n", min = 1, max = 31)
             return user_input
     except KeyboardInterrupt:
         print("It was nice while it lasted. See you next time!")
         raise SystemExit
 
 
-def results():
+def results(m, d):
     clear()
     # Prompt user for month of birth and store in variable month
-    user_month = get_month()
-    month = user_month
+    month = m
     # clear()
     # Prompt user for day of birth and store in variable day
-    user_day = get_day()
-    day = user_day
+    day = d
     # Get today's date
     today = datetime.date.today()
     # get datetime object dfor users birthday
-    birthday = datetime.date(2008, int(month), int(day))
+    birthday = datetime.date(1992, int(month), int(day))
     # Calculate user's age
     age_year = rd(today, birthday)
     # Display result and append to results list global variable
-    your_age = print(f"You are {age_year.years} years old!\n")
-    # user_results.user_answer_list.append(age_year.years)
+    print(f"You are {age_year.years} years old!\n")
+    age = "Age: "
+    user_results.user_answer_list.append(age)
+    user_results.user_answer_list.append(age_year.years)
     # Display custom fact for user and append to results list
-    # custom_fact = print(f"Fun fact for the year {user_results.birth_year[0]}:\n{facts.dictionary.get((user_results.birth_year[0]))}")
-    # user_results.user_answer_list.append(custom_fact)
+    custom_fact = print(f"Fun fact for the year {1992}:\n{facts.dictionary.get(1992)}")
+    user_results.user_answer_list.append(facts.dictionary.get(1992))
     # Get bonus random fact and append to results list
     random_fact = randfacts.get_fact()
     print(f"BONUS! enjoy this fun, completely random fact:\n{random_fact}")
     return age_year
 
-# clear()
-results()
+

@@ -1,3 +1,5 @@
+import facts
+
 # Global variable: list contains the users answers so they are available to be written to a file and viewed later
 user_answer_list = []
 

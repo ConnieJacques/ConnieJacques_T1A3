@@ -8,6 +8,7 @@ import randfacts
 from dateutil.relativedelta import relativedelta as rd
 
 
+
 # Dictionary contains key = question number, values = question
 questions_dictionary = {
     'Question One:': 'Which generation do you belong to?',
@@ -49,12 +50,12 @@ with open('question.csv') as f:
 
 
 # Prints alternating answer codes and possible answers to format the answers
-def question_series(question_code, question, answer_options):
-    # List contains answer codes
-    question_values = ['a)', 'b)', 'c)', 'd)', 'e)', 'f)', 'g)', 'h)', 'i)', 'j)', 'k)']
-    print(question_code, question)
-    for i, j in (zip(question_values, answer_options)):
-        print(i, j)
+    def question_series(question_code, question, answer_options):
+        # List contains answer codes
+        question_values = ['a)', 'b)', 'c)', 'd)', 'e)', 'f)', 'g)', 'h)', 'i)', 'j)', 'k)']
+        print(question_code, question)
+        for i, j in (zip(question_values, answer_options)):
+            print(i, j)
 
 
 # assess user answer is between letters a - g
@@ -248,15 +249,16 @@ def question_two_answers():
             user_results.user_answer_list.append(possible_answers[29])
         elif answer_option == 'k':
             user_results.user_answer_list.append(possible_answers[30])
+        clear()
         return answer_option
     except KeyboardInterrupt:
         print("It was nice while it lasted! See you next time!")
         raise SystemExit
 
 # Question three and possible answers
-def question_three_answers():
+def question_three_answers(qtwo):
     user_results.user_answer_list.append(question_three.number)
-    match possible_user_answers:
+    match qtwo:
         case 'a':
             try:
                 (question_series(question_three.number, question_three.question, possible_answers[29:32]))
@@ -440,6 +442,7 @@ def question_four_answers():
             user_results.user_answer_list.append(possible_answers[18])
         elif answer_option == 'k':
             user_results.user_answer_list.append(possible_answers[19])
+        clear()   
         return answer_option
     except KeyboardInterrupt:
         print("It was nice while it lasted! See you next time!")
@@ -447,9 +450,9 @@ def question_four_answers():
 
 
 # Question five - prints answer options based on the input taken in response to question_three_answers()
-def question_five_answers():
+def question_five_answers(qfour):
     user_results.user_answer_list.append(question_five.number)
-    match possible_user_answers:
+    match qfour:
         case 'a':
             try:
                 (question_series(question_five.number, question_five.question, possible_answers[56:64]))
@@ -829,11 +832,18 @@ def get_month():
     user_input = input()
     try:
         if user_input.lower() == 'quit':
-                raise KeyboardInterrupt
-        elif int(user_input) in range(1, 12 + 1):
+            raise KeyboardInterrupt
+        user_input = int(user_input)
+        if user_input in range(1, 12 + 1):
+            clear()
             return user_input
         else:
-            user_input = pyip.inputInt(prompt = "Please enter a number between 1 - 12\n", min = 1, max = 12)        
+            user_input = pyip.inputInt(prompt = "Please enter a number between 1 - 12\n", min = 1, max = 12)
+            clear()
+            return user_input
+    except ValueError:
+        pyip.inputInt(prompt = "Please enter a number between 1 - 12\n", min = 1, max = 12)
+        clear()        
     except KeyboardInterrupt:
         print("It was nice while it lasted. See you next time!")
         raise SystemExit
@@ -841,27 +851,36 @@ def get_month():
 
 # Ask user for the day they were born on
 def get_day():
-    user_input = input("On what day of the month were you born? Please enter a number between 1 - 31\n")
+    print("On what day of the month were you born? Please enter a number between 1 - 31")
+    user_input = input()
     try:
         if user_input.lower() == 'quit':
             raise KeyboardInterrupt
-        elif int(user_input) in range(1, 31 + 1):
+        user_input = int(user_input)
+        if user_input in range(1, 31 + 1):
+            clear()
             return user_input
-        else: 
-            user_input = pyip.inputInt(min = 1, max = 31)
+        else:
+            user_input = pyip.inputInt(prompt = "Please enter a number between 1 - 31\n", min = 1, max = 31)
+            clear()
             return user_input
+    except ValueError:
+        pyip.inputInt(prompt = "Please enter a number between 1 - 31\n", min = 1, max = 31)
+        clear()  
+    except ValueError:
+        pyip.inputInt(prompt = "Please enter a number between 1 - 12\n", min = 1, max = 12)
     except KeyboardInterrupt:
         print("It was nice while it lasted. See you next time!")
         raise SystemExit
 
 
-def results(m, d):
+def results():
     clear()
     # Prompt user for month of birth and store in variable month
-    month = m
+    month = get_month()
     # clear()
     # Prompt user for day of birth and store in variable day
-    day = d
+    day = get_day()
     # Get today's date
     today = datetime.date.today()
     # get datetime object dfor users birthday
@@ -881,35 +900,3 @@ def results(m, d):
     random_fact = randfacts.get_fact()
     print(f"BONUS! enjoy this fun, completely random fact:\n{random_fact}")
     return age_year
-
-
-
-
-
-# Clear terminal 
-clear()
-
-# # Ask first queestion
-question_one_answers()
-clear()
-
-# # # Ask second question
-possible_user_answers = question_two_answers()
-clear()
-
-# # # Ask third question
-question_three_answers()
-clear()
-
-
-# # # Ask fourth question
-possible_user_answers = question_four_answers()
-clear()
-
-# # # Ask firth question
-question_five_answers()
-clear()
-
-results(get_month(), get_day())
-
-print(f"!!! {user_results.user_answer_list}")

@@ -891,8 +891,9 @@ def results():
     # Display result and append to results list global variable
     print(f"You are {age_year.years} years old!\n")
     age = "Age: "
+    str_years = str(age_year.years)
     user_results.user_answer_list.append(age)
-    user_results.user_answer_list.append(age_year.years)
+    user_results.user_answer_list.append(str_years)
     # Display custom fact for user and append to results list
     print(f"Fun fact for the year {user_results.birth_year[0]}:\n{facts.dictionary.get(int(birthday_year))}")
     user_results.user_answer_list.append(facts.dictionary.get(int(birthday_year)))

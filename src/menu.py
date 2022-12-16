@@ -4,7 +4,7 @@ from clear import clear
 import pyinputplus as pyip
 import questions
 import save_results
-
+import view_results
 
 
 # Get and validate user's name
@@ -34,12 +34,10 @@ def get_user_name():
 
 def main_menu():
     print(f"Hi {get_user_name()}! What would you like to do?\n1. Play a new game\n2. Save the results of your last game\n3. View the results of a previous game\n4. Quit")
-    # user_input = pyip.inputChoice(['1', '2', '3', '4', 'QUIT'])
     try:
         # Play the quiz game
         while True:
-            # print(f"Hi {get_user_name()}! What would you like to do?\n1. Play a new game\n2. Save the results of your last game\n3. View the results of a previous game\n4. Quit")
-            user_input = pyip.inputChoice(['1', '2', '3', '4', 'QUIT'])
+            user_input = pyip.inputChoice(['1', '2', '3', '4'])
             if user_input == '1':
                 clear()
                 questions.question_one_answers()
@@ -52,14 +50,19 @@ def main_menu():
                 print(f"\nWhat would you like to do?\n1. Play a new game\n2. Save the results of your last game\n3. View the results of a previous game\n4. Quit")
                 continue
             if user_input == '2':
-                # view previous results
+                clear()
+                # Save results of the last game
                 save_results.save_results()
+                print(f"\nWhat would you like to do?\n1. Play a new game\n2. Save the results of your last game\n3. View the results of a previous game\n4. Quit")
+                continue
             elif user_input == '3':
-                pass
+                clear()
+                # View saved results
+                view_results.view_results(view_results.available_results())
+                print(f"\nWhat would you like to do?\n1. Play a new game\n2. Save the results of your last game\n3. View the results of a previous game\n4. Quit")
+                continue
             elif user_input == '4' or user_input == 'quit':
                 raise KeyboardInterrupt
     except KeyboardInterrupt:
         print("It was nice while it lasted. See you next time!")
         raise SystemExit
-
-main_menu()

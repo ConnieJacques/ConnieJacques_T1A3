@@ -896,7 +896,9 @@ def results():
     user_results.user_answer_list.append(str_years)
     # Display custom fact for user and append to results list
     print(f"Fun fact for the year {user_results.birth_year[0]}:\n{facts.dictionary.get(int(birthday_year))}")
-    user_results.user_answer_list.append(facts.dictionary.get(int(birthday_year)))
+    by = facts.dictionary.get(int(birthday_year))
+    strip_by = by.strip()
+    user_results.user_answer_list.append(strip_by)
     # Get bonus random fact and append to results list
     random_fact = randfacts.get_fact()
     print(f"BONUS! enjoy this fun, completely random fact:\n{random_fact}")

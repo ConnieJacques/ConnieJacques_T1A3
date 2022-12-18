@@ -108,7 +108,7 @@ To use the application, click on the green CODE button in the GitHub link, click
 git clone https://github.com/ConnieJacques/ConnieJacques_T1A3.git
 `
 
-to clone the repository. Navigate into the /src directory.
+to clone the repository. Navigate into the new directory called ConnieJacques_T1A3 and then navigate into the /src directory.
 
 
 Then, execute:
@@ -180,7 +180,7 @@ Python3 is required to use this command line application. Python3 requires the f
 The *Quiz Game* Terminal App requires the use of exactly one command line application:
 
 `
-./setupgame.sh
+./.sh
 `
 After cloning the repository, the user needs to navigate into the /src directory and execute the single command above. As long as they have python3 installed the application will run without the use of further command line commands. Use input is needed to navigate the application but simply requires the user to type their text into the command line and press ENTER.
 

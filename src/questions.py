@@ -50,12 +50,12 @@ with open('question.csv') as f:
 
 
 # Prints alternating answer codes and possible answers to format the answers
-    def question_series(question_code, question, answer_options):
-        # List contains answer codes
-        question_values = ['a)', 'b)', 'c)', 'd)', 'e)', 'f)', 'g)', 'h)', 'i)', 'j)', 'k)']
-        print(question_code, question)
-        for i, j in (zip(question_values, answer_options)):
-            print(i, j)
+def question_series(question_code, question, answer_options):
+    # List contains answer codes
+    question_values = ['a)', 'b)', 'c)', 'd)', 'e)', 'f)', 'g)', 'h)', 'i)', 'j)', 'k)']
+    print(question_code, question)
+    for i, j in (zip(question_values, answer_options)):
+        print(i, j)
 
 
 # assess user answer is between letters a - g
@@ -217,7 +217,7 @@ def question_one_answers():
         raise SystemExit
 
 
-# Second question and possible answers >> question 3 has become question 2
+# Second question and possible answers
 def question_two_answers():
     user_results.user_answer_list.append(question_two.number)
     try: 
@@ -356,7 +356,7 @@ def question_three_answers(qtwo):
         case 'h':
             try:
                 (question_series(question_three.number, question_three.question, possible_answers[46:49]))
-                answer_actions_ac()
+                answer_option = answer_actions_ac()
                 if answer_option == 'a':
                     user_results.user_answer_list.append(possible_answers[46])
                 elif answer_option == 'b':

@@ -37,7 +37,7 @@ def main_menu():
     try:
         # Play the quiz game
         while True:
-            user_input = pyip.inputChoice(['1', '2', '3', '4'])
+            user_input = pyip.inputChoice(['1', '2', '3', '4', 'QUIT'])
             if user_input == '1':
                 clear()
                 questions.question_one_answers()

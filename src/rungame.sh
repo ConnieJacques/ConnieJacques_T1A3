@@ -3,6 +3,6 @@
 if command -v python3 &> /dev/null
 then
     # Execute main.py to run the app
-    python3 src/main.py
+    python3 main.py
     exit
 fi

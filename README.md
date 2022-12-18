@@ -150,23 +150,23 @@ You will be asked a series of questions. The answers you provide to these questi
 ### Dependancies required to install the Terminal App
 The dependancies required for the *Quiz Game* Terminal App are: 
 
-attrs==22.1.0
-iniconfig==1.1.1
-packaging==22.0
-pluggy==1.0.0
-PyInputPlus==0.2.12
-PySimpleValidate==0.2.12
-pytest==7.2.0
-python-dateutil==2.8.2
-randfacts==0.19.0
-six==1.16.0
-stdiomask==0.0.6
+- attrs==22.1.0
+- iniconfig==1.1.1
+- packaging==22.0
+- pluggy==1.0.0
+- PyInputPlus==0.2.12
+- PySimpleValidate==0.2.12
+- pytest==7.2.0
+- python-dateutil==2.8.2
+- randfacts==0.19.0
+- six==1.16.0
+- stdiomask==0.0.6
 
-Pip3 package management is used to download all of the dependancies and their requirements for the user from the requirements.txt file when the program is executed with the single command ./bash/sh. A virtual environment is created and packages are installed within the venv. This will prevent most dependancy conflicts from arising.
+Pip3 package management is used to download all of the dependancies and their requirements for the user from the requirements.txt file when the program is executed with the single command ./setupgamesh. A virtual environment is created and packages are installed within the venv. This will prevent most dependancy conflicts from arising.
 
 ### System and Hardware Requirements
 
-Python3 is required to use this command line application. Python3 requires the following work as expected:
+Python3 is required to use this command line application. Python3 requires the following to work as expected:
 
 - Linux/Ubuntu 16.04 to 17.10 (Debian or Fedora OS). Minimum 2GB RAM (4GB preferably). A minimum of 5GB available disk space is required as well as sudo access to the system.
 - Windows 7 and up. Minimum 2GB RAM (4GB preferably). Minimum of 5GB available disk space

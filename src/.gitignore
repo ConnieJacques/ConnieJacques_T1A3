@@ -5,3 +5,5 @@ src/__pycache__
 *.pyc
 *~
 *.swp
+src/freeze
+src/3

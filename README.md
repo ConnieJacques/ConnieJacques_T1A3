@@ -184,6 +184,14 @@ The *Quiz Game* Terminal App requires the use of exactly one command line applic
 `
 After cloning the repository, the user needs to navigate into the /src directory and execute the single command above. As long as they have python3 installed the application will run without the use of further command line commands. Use input is needed to navigate the application but simply requires the user to type their text into the command line and press ENTER.
 
+
+## Link to Presentation Recording
+
+The presentation can be accessed here:
+
+https://vimeo.com/782201674
+
+
 ## R3 - References
 
 **The following sources were utilised to write the questions for *Quiz Game*.**
